@@ -115,49 +115,37 @@ const metadata = {
     </Fragment>
   </Steps>
 
-  <!-- Use Cases / Who We Serve ******************* -->
+  <!-- MVP Solutions ******************* -->
 
   <Features2
     id="use-cases"
-    title="Built for every part of healthcare"
-    subtitle="From diagnostics to drug development, from clinical trials to manufacturing"
-    tagline="Use Cases"
+    title="Our MVP Solutions"
+    subtitle="Validated prototypes proving federated learning works in real healthcare scenarios"
+    tagline="Solutions"
     items={[
       {
-        title: 'For Hospitals',
+        title: 'Multi-Hospital FL Network',
         description:
-          'Smarter diagnostics across sites. Learn from rare cases across your network without centralizing patient data. Improve accuracy for edge cases and rare conditions.',
+          'Simulated network of 3-5 hospital nodes training sepsis prediction models federally. Proves convergence without data movement. Built with synthetic MIMIC-III data. Ready for pilot deployment.',
         icon: 'tabler:building-hospital',
       },
       {
-        title: 'For Labs & Diagnostics',
+        title: 'Real-Time FL Dashboard',
         description:
-          'Transform from data producer to AI provider. Build proprietary AI models on your unique datasets and license them without sharing the underlying data.',
-        icon: 'tabler:test-pipe',
+          '"The Intelligence Travels, the Data Stays" - Visual interface showing live FL training: active nodes, gradient flows, model accuracy improving round by round. Hard counter proving 0 bytes of patient data transmitted.',
+        icon: 'tabler:dashboard',
       },
       {
-        title: 'For Pharma & Clinical Trials',
+        title: 'Federated Pharmacovigilance',
         description:
-          'Faster global trials with federated patient recruitment and real-time safety monitoring. Identify eligible patients across networks without moving PHI.',
-        icon: 'tabler:pill',
-      },
-      {
-        title: 'For CDMOs & Manufacturing',
-        description:
-          'Eliminate the $50B batch failure problem. Use federated learning to predict manufacturing failures before they happen without exposing proprietary processes.',
-        icon: 'tabler:flask',
-      },
-      {
-        title: 'For Post-Market Surveillance',
-        description:
-          'Federated pharmacovigilance across hospitals, pharmacies, and health systems. Detect adverse events 10x faster without centralizing patient records.',
+          'Drug safety signal detection across distributed hospital nodes using FDA MedWatch data. Catches adverse event correlations 10x faster than any single node. Addresses the 90% missed events problem.',
         icon: 'tabler:heartbeat',
       },
       {
-        title: 'For Rare Disease Research',
+        title: 'CDMO Batch Failure Predictor',
         description:
-          'Patient-led registries that enable research without surrendering data ownership. Patients maintain control while contributing to life-saving research.',
-        icon: 'tabler:dna',
+          'Federated yield prediction across manufacturing facilities using public bioprocess datasets. Outperforms single-facility models. Tackles the $50B batch failure problem without exposing proprietary processes.',
+        icon: 'tabler:flask',
       },
     ]}
   >
