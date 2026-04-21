@@ -1,0 +1,22 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Network visualization with connected nodes -->
+  <g id="network-icon">
+    <!-- Central node -->
+    <circle cx="30" cy="30" r="6" fill="#29D4D4"/>
+    <!-- Surrounding nodes -->
+    <circle cx="15" cy="20" r="4" fill="#0168D0"/>
+    <circle cx="15" cy="40" r="4" fill="#0168D0"/>
+    <circle cx="45" cy="20" r="4" fill="#0168D0"/>
+    <circle cx="45" cy="40" r="4" fill="#0168D0"/>
+    <!-- Connecting lines -->
+    <line x1="30" y1="30" x2="15" y2="20" stroke="#29D4D4" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="30" x2="15" y2="40" stroke="#29D4D4" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="30" x2="45" y2="20" stroke="#29D4D4" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="30" x2="45" y2="40" stroke="#29D4D4" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Text -->
+  <text x="65" y="38" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#0168D0">
+    PanamaHealth
+  </text>
+</svg>

@@ -1,0 +1,13 @@
+---
+import { SITE } from 'astrowind:config';
+import logoImg from '~/assets/images/panamahealth-logo.svg';
+import { Image } from 'astro:assets';
+---
+
+<Image
+  src={logoImg}
+  alt={SITE?.name || 'PanamaHealth'}
+  width={200}
+  height={60}
+  class="h-10 md:h-12 w-auto"
+/>

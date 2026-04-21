@@ -1,0 +1,94 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact PanamaHealth - Join Our Pilot Program',
+  description: 'Get in touch with PanamaHealth to join our federated learning pilot program. We are working with 2-3 partners to validate our technology.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Get in Touch"
+    title="Join Our Pilot Program"
+  />
+
+  <ContactUs
+    id="form"
+    title="Ready to transform healthcare AI?"
+    subtitle="We're working with 2-3 forward-thinking partners to validate our federated learning infrastructure. Your data stays with you. Zero compliance risk."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name *',
+        placeholder: 'John Doe',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email *',
+        placeholder: 'john@hospital.com',
+      },
+      {
+        type: 'text',
+        name: 'organization',
+        label: 'Organization *',
+        placeholder: 'Memorial Hospital',
+      },
+      {
+        type: 'text',
+        name: 'role',
+        label: 'Your Role',
+        placeholder: 'CTO, Head of AI, Research Director',
+      },
+    ]}
+    textarea={{
+      label: 'Tell us about your use case',
+      name: 'message',
+      placeholder: 'What healthcare AI challenge are you trying to solve? What data do you have available?',
+      rows: 6,
+    }}
+    button="Request Pilot Access"
+    disclaimer={{
+      label:
+        'By submitting this form, you acknowledge and agree to the collection of your information for the purpose of evaluating your pilot program application.',
+    }}
+    description="We typically respond within 1-2 business days to qualified pilot inquiries."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="How can we help you?"
+    items={[
+      {
+        title: 'Pilot Program',
+        description: 'Interested in joining our pilot program? Fill out the form above to get started. Free access during the pilot phase with full support.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Technical Questions',
+        description:
+          'Have questions about how federated learning works or how it integrates with your existing infrastructure? Our team is here to help.',
+        icon: 'tabler:help-circle',
+      },
+      {
+        title: 'Partnership Inquiries',
+        description:
+          'Interested in partnering with PanamaHealth for your organization or network? Let\'s discuss how we can work together.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Email',
+        description: 'info@panamahealth.ai',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

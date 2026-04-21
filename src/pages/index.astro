@@ -1,0 +1,295 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'PanamaHealth - Federated Intelligence Infrastructure for Healthcare',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Demo',
+        href: '#pilot',
+      },
+      { text: 'Learn How It Works', href: '#solution' },
+    ]}
+  >
+    <Fragment slot="title">
+      Connecting oceans of <span class="text-primary">intelligence</span>, not data
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Federated Intelligence Infrastructure for Healthcare</span>
+      <br />
+      The AI travels to the data. The data never moves. Enable global collaboration while your sensitive healthcare data stays secure and compliant.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gradient-cyan-blue opacity-10"></div>
+    </Fragment>
+  </Hero>
+
+  <!-- Problem Statement ******************* -->
+
+  <Features
+    id="problem"
+    tagline="The Challenge"
+    title="Healthcare AI is stuck — because data can't legally move"
+    subtitle="The industry faces critical barriers that prevent AI from reaching its full potential"
+    items={[
+      {
+        title: '$7.42M average data breach cost',
+        description:
+          'Healthcare data breaches are the most expensive across all industries, making data sharing prohibitively risky.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'HIPAA compliance costs $500K-$5M+ per year',
+        description:
+          'Regulatory requirements create massive overhead for any data sharing or collaboration initiative.',
+        icon: 'tabler:gavel',
+      },
+      {
+        title: 'Each institution learns in isolation',
+        description:
+          'Hospitals, labs, and research centers cannot benefit from collective intelligence, limiting diagnostic accuracy and research outcomes.',
+        icon: 'tabler:building-hospital',
+      },
+      {
+        title: '90% of adverse events missed',
+        description:
+          'Drug safety monitoring systems fail to detect the vast majority of adverse events because data remains siloed.',
+        icon: 'tabler:alert-triangle',
+      },
+    ]}
+  />
+
+  <!-- Solution Overview ******************* -->
+
+  <Steps
+    id="solution"
+    title="The AI travels to the data. The data never moves."
+    tagline="How It Works"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">AI goes to each site</span>',
+        description:
+          'Our federated learning system distributes AI models to hospitals, labs, and research centers where the data lives. No data leaves its secure location.',
+        icon: 'tabler:send',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Learning happens locally</span>',
+        description:
+          'Each institution trains the model on their own private data behind their own firewall. Full control, zero data exposure, complete HIPAA compliance.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Only insights are shared</span>',
+        description:
+          'Only encrypted model updates (not data) are aggregated to create collective intelligence. The result: smarter AI that has learned from thousands of cases without seeing a single patient record.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Result: Global Intelligence, Zero Data Movement',
+        description:
+          'You get AI trained on massive, diverse datasets while maintaining complete data sovereignty and compliance.',
+        icon: 'tabler:check',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps>
+
+  <!-- Use Cases / Who We Serve ******************* -->
+
+  <Features2
+    id="use-cases"
+    title="Built for every part of healthcare"
+    subtitle="From diagnostics to drug development, from clinical trials to manufacturing"
+    tagline="Use Cases"
+    items={[
+      {
+        title: 'For Hospitals',
+        description:
+          'Smarter diagnostics across sites. Learn from rare cases across your network without centralizing patient data. Improve accuracy for edge cases and rare conditions.',
+        icon: 'tabler:building-hospital',
+      },
+      {
+        title: 'For Labs & Diagnostics',
+        description:
+          'Transform from data producer to AI provider. Build proprietary AI models on your unique datasets and license them without sharing the underlying data.',
+        icon: 'tabler:test-pipe',
+      },
+      {
+        title: 'For Pharma & Clinical Trials',
+        description:
+          'Faster global trials with federated patient recruitment and real-time safety monitoring. Identify eligible patients across networks without moving PHI.',
+        icon: 'tabler:pill',
+      },
+      {
+        title: 'For CDMOs & Manufacturing',
+        description:
+          'Eliminate the $50B batch failure problem. Use federated learning to predict manufacturing failures before they happen without exposing proprietary processes.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'For Post-Market Surveillance',
+        description:
+          'Federated pharmacovigilance across hospitals, pharmacies, and health systems. Detect adverse events 10x faster without centralizing patient records.',
+        icon: 'tabler:heartbeat',
+      },
+      {
+        title: 'For Rare Disease Research',
+        description:
+          'Patient-led registries that enable research without surrendering data ownership. Patients maintain control while contributing to life-saving research.',
+        icon: 'tabler:dna',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/50 to-transparent dark:via-slate-900/50"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Why Panama Health Wins ******************* -->
+
+  <Content
+    id="differentiation"
+    isReversed
+    title="Why we're different"
+    tagline="Our Advantage"
+    items={[
+      {
+        title: 'Built for clinical environments, not just research',
+        description:
+          'While competitors focus on research databases, we tackle the harder problem: real-world clinical data with all its messiness and compliance requirements.',
+      },
+      {
+        title: 'Unlock new markets',
+        description:
+          'We enable entirely new business models: pharmacovigilance networks, CDMO manufacturing optimization, lab-to-AI transformation.',
+      },
+      {
+        title: 'Agentic orchestration',
+        description:
+          'Automated federation with intelligent agents that handle the complexity of multi-site coordination, consent management, and compliance.',
+      },
+      {
+        title: 'Network effects across verticals',
+        description:
+          'Each new use case strengthens the entire platform. Hospital networks, pharma partnerships, and lab collaborations compound in value.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Purpose-built for healthcare's unique challenges
+      </h3>
+      Where others see limitations, we see opportunities to transform entire industries.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Trust & Social Proof ******************* -->
+
+  <Features
+    id="trust"
+    title="Security & compliance by design"
+    tagline="Trust & Security"
+    subtitle="Built from the ground up with healthcare's stringent requirements in mind"
+    items={[
+      {
+        title: 'HIPAA Ready',
+        description:
+          'Architecture designed for HIPAA compliance from day one. Your data never leaves your secure environment.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Differential Privacy',
+        description:
+          'Mathematical guarantees that individual patient data cannot be reverse-engineered from model updates.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Gradient Poisoning Protection',
+        description:
+          'Advanced security against adversarial attacks that attempt to compromise the federated learning process.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Cryptographic Provenance',
+        description:
+          'Every model update is cryptographically signed and tracked, creating an immutable audit trail for regulatory compliance.',
+        icon: 'tabler:file-certificate',
+      },
+      {
+        title: 'Zero Data Movement',
+        description:
+          'Your data never leaves your infrastructure. We bring compute to data, not data to compute.',
+        icon: 'tabler:database-off',
+      },
+      {
+        title: 'Expert Team',
+        description:
+          'Built by healthcare AI experts with deep experience in clinical systems, drug development, and regulatory compliance.',
+        icon: 'tabler:users',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-50 via-transparent to-blue-50 dark:from-slate-900 dark:via-transparent dark:to-slate-900"></div>
+    </Fragment>
+  </Features>
+
+  <!-- Call to Action / Pilot Program ******************* -->
+
+  <CallToAction
+    id="pilot"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Join Our Pilot Program',
+        href: '#contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Join our pilot program
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We're working with 2-3 forward-thinking partners to validate our technology in real-world healthcare environments.
+      <br class="hidden md:inline" />
+      <br class="hidden md:inline" />
+      <strong>Your data stays with you. Zero compliance risk.</strong>
+      <br class="hidden md:inline" />
+      <br class="hidden md:inline" />
+      Benefits: Free access during pilot phase, shape the product roadmap, early adopter advantages, and help define the future of federated healthcare AI.
+      <br class="hidden md:inline" />
+      <br class="hidden md:inline" />
+      Contact us at: <a href="mailto:info@panamahealth.ai" class="text-primary hover:underline">info@panamahealth.ai</a>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gradient-cyan-blue opacity-10"></div>
+    </Fragment>
+  </CallToAction>
+</Layout>

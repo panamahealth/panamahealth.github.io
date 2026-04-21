@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="white"/>
+  <!-- Central node -->
+  <circle cx="32" cy="32" r="8" fill="#29D4D4"/>
+  <!-- Surrounding nodes -->
+  <circle cx="16" cy="20" r="5" fill="#0168D0"/>
+  <circle cx="16" cy="44" r="5" fill="#0168D0"/>
+  <circle cx="48" cy="20" r="5" fill="#0168D0"/>
+  <circle cx="48" cy="44" r="5" fill="#0168D0"/>
+  <!-- Connecting lines -->
+  <line x1="32" y1="32" x2="16" y2="20" stroke="#29D4D4" stroke-width="3" opacity="0.6"/>
+  <line x1="32" y1="32" x2="16" y2="44" stroke="#29D4D4" stroke-width="3" opacity="0.6"/>
+  <line x1="32" y1="32" x2="48" y2="20" stroke="#29D4D4" stroke-width="3" opacity="0.6"/>
+  <line x1="32" y1="32" x2="48" y2="44" stroke="#29D4D4" stroke-width="3" opacity="0.6"/>
+</svg>
