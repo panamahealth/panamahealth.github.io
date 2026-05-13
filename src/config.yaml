@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: PanamaHealth - Federated Intelligence Infrastructure for Healthcare
+    default: PanamaHealth — Edge-Native Federated Intelligence OS for Healthcare
     template: '%s — PanamaHealth'
-  description: "Connecting oceans of intelligence, not data. Federated learning infrastructure that enables healthcare AI collaboration without moving sensitive data. Built for hospitals, labs, pharma, and clinical trials."
+  description: 'Connecting oceans of intelligence, not data. PanamaHealth is the edge-native federated intelligence OS for healthcare — the AI travels to the data, the data never moves. Built for hospital networks, payers, pharma, CDMOs, and government health systems.'
   robots:
     index: true
     follow: true

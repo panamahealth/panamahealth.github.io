@@ -5,23 +5,21 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact PanamaHealth - Join Our Pilot Program',
-  description: 'Get in touch with PanamaHealth to join our federated learning pilot program. We are working with 2-3 partners to validate our technology.',
+  title: 'Contact PanamaHealth — Request a Demo',
+  description:
+    'Get in touch with PanamaHealth to request a demo of the edge-native federated intelligence OS for healthcare, or to discuss a pilot, partnership, or investment.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText
-    tagline="Get in Touch"
-    title="Join Our Pilot Program"
-  />
+  <HeroText tagline="Get in Touch" title="Request a Demo" />
 
   <ContactUs
     id="form"
     title="Ready to transform healthcare AI?"
-    subtitle="We're working with 2-3 forward-thinking partners to validate our federated learning infrastructure. Your data stays with you. Zero compliance risk."
+    subtitle="Whether you're a hospital, payer, pharma, CDMO, or investor — talk to us. The AI travels to the data. The data never moves. Your data stays with you. Zero compliance risk."
     inputs={[
       {
         type: 'text',
@@ -54,12 +52,12 @@ const metadata = {
       placeholder: 'What healthcare AI challenge are you trying to solve? What data do you have available?',
       rows: 6,
     }}
-    button="Request Pilot Access"
+    button="Request Demo"
     disclaimer={{
       label:
-        'By submitting this form, you acknowledge and agree to the collection of your information for the purpose of evaluating your pilot program application.',
+        'By submitting this form, you acknowledge and agree to the collection of your information for the purpose of evaluating your inquiry.',
     }}
-    description="We typically respond within 1-2 business days to qualified pilot inquiries."
+    description="We typically respond within 1–2 business days to qualified inquiries."
   />
 
   <!-- Features2 Widget ************** -->
@@ -68,20 +66,21 @@ const metadata = {
     title="How can we help you?"
     items={[
       {
-        title: 'Pilot Program',
-        description: 'Interested in joining our pilot program? Fill out the form above to get started. Free access during the pilot phase with full support.',
+        title: 'Pilot / Demo',
+        description:
+          'Hospital networks, payers, pharma, or CDMOs — request a demo of the federated OS and discuss a Phase 1 pilot with claims, RCM, or pharmacovigilance workflows.',
         icon: 'tabler:rocket',
       },
       {
         title: 'Technical Questions',
         description:
-          'Have questions about how federated learning works or how it integrates with your existing infrastructure? Our team is here to help.',
+          'Curious about edge-native training, Krum/Trimmed Mean aggregation, cryptographic provenance, or how we slot under your existing HIPAA + HL7 FHIR stack? Our team is here.',
         icon: 'tabler:help-circle',
       },
       {
-        title: 'Partnership Inquiries',
+        title: 'Partnership & Investment',
         description:
-          'Interested in partnering with PanamaHealth for your organization or network? Let\'s discuss how we can work together.',
+          'Pre-seed round open — $350K–$500K. Strategic partners welcome across regulatory, clinical, pharma, and enterprise health systems.',
         icon: 'tabler:users',
       },
       {
