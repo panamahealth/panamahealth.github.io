@@ -4,10 +4,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Note from '~/components/widgets/Note.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -28,24 +24,10 @@ const metadata = {
         text: 'Request a Demo',
         href: '/contact',
       },
-      { text: 'How It Works', href: '#solution' },
     ]}
   >
     <Fragment slot="title">
       Connecting oceans of <span class="text-primary">intelligence</span>, not data
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      In every other industry, AI gets smarter by sharing data. In healthcare, that is illegal — every institution
-      learns alone, from a fraction of what it needs.
-      <br class="hidden md:inline" />
-      <br class="hidden md:inline" />
-      <span class="font-semibold">We fix that.</span> The AI travels to the data. The data never moves.
-      <br class="hidden md:inline" />
-      <br class="hidden md:inline" />
-      <span class="text-sm text-muted dark:text-slate-400"
-        >Hannah Kalantari · CEO &nbsp;|&nbsp; Yaser Keneshloo, PhD · CTO</span
-      >
     </Fragment>
 
     <Fragment slot="bg">
@@ -92,92 +74,29 @@ const metadata = {
     description="Panama Health is building the infrastructure layer the entire market runs on."
   />
 
-  <!-- Problem Stats ******************* -->
-
-  <Stats
-    id="problem"
-    tagline="The Problem"
-    title="Healthcare AI is years behind — because of one problem"
-    subtitle="To build powerful AI, you need to bring large amounts of data together. In healthcare, that is almost always illegal. The result: siloed institutions, weak models, and runaway compliance costs."
-    stats={[
-      { amount: '$7.42M', title: 'Avg. breach cost — highest of any industry, 14 years running (IBM 2025)' },
-      { amount: '$1.9M', title: 'HIPAA fine per violation + $500K–$5M/yr compliance overhead per hospital' },
-      { amount: '90%', title: 'Adverse drug events missed — no hospital sees enough cases' },
-      { amount: '$50B+', title: 'Pharma losses to batch failures — data too sensitive to share' },
-      { amount: '18mo', title: 'Data-sharing lag — legal review before a single byte can move' },
-      { amount: '0', title: 'Shared learning — every institution learns alone, models stay weak and biased' },
-    ]}
-  />
-
-  <!-- The Solution ******************* -->
-
-  <Steps
-    id="solution"
-    tagline="The Solution"
-    title="The AI travels to the data. The data never moves."
-    items={[
-      {
-        title: '01. <span class="font-medium">AI travels to the data</span>',
-        description:
-          'Panama Health sends the AI model directly to each institution. The data never leaves its walls. No transfers, no exposure, no legal risk.',
-        icon: 'tabler:send',
-      },
-      {
-        title: '02. <span class="font-medium">Learning happens locally</span>',
-        description:
-          'Each hospital, lab, or institute trains the AI on its own data privately. Nothing is transmitted. Full sovereignty is maintained.',
-        icon: 'tabler:brain',
-      },
-      {
-        title: '03. <span class="font-medium">Only the learning is shared</span>',
-        description:
-          'Each site sends back what the AI learned — encrypted gradients, never raw data. A smarter global model emerges from everyone\'s contribution.',
-        icon: 'tabler:network',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Steps>
-
-  <Note
-    icon="tabler:quote"
-    title="Think of it this way —"
-    description="like a study group where everyone does their own homework, then only shares the answers, not their notes."
-  />
-
   <!-- The Product ******************* -->
 
   <Features2
     id="product"
     tagline="The Product"
-    title="What Panama Health actually does"
+    title="What Panama Health does"
     subtitle="Nothing gets replaced. Everything gets smarter."
     columns={2}
     items={[
       {
         title: 'Federated learning core',
-        description:
-          'Models train locally. Only encrypted gradients — never raw data — are aggregated across nodes using Krum / Trimmed Mean aggregation with cryptographic provenance hashing.',
         icon: 'tabler:cpu',
       },
       {
         title: 'Agentic AI orchestration',
-        description:
-          'Autonomous agents handle node discovery, schema alignment, and gradient pipelines — compressing 18-month integration timelines to just weeks.',
         icon: 'tabler:robot',
       },
       {
         title: 'Security by design',
-        description:
-          'Differential privacy · Krum / Trimmed Mean aggregation · Cryptographic provenance hashing · Reputation scoring. Built compliance-first, not compliance-bolted-on.',
         icon: 'tabler:shield-lock',
       },
       {
         title: 'Works with existing systems',
-        description:
-          'Nothing gets replaced. Panama Health runs under a hospital\'s existing AI stack — the invisible network layer that makes everything smarter.',
         icon: 'tabler:plug-connected',
       },
     ]}
@@ -190,235 +109,6 @@ const metadata = {
       { title: 'HL7 FHIR', icon: 'tabler:file-text' },
       { title: 'On-prem or hybrid', icon: 'tabler:building' },
       { title: 'Device agnostic', icon: 'tabler:devices' },
-    ]}
-  />
-
-  <!-- Go-to-Market ******************* -->
-
-  <Features2
-    id="gtm"
-    tagline="Go-to-Market"
-    title="Who we serve — landing and expanding"
-    subtitle="One clear entry point. Four phases. Every institution that joins makes the network more valuable for everyone already in it."
-    columns={3}
-    items={[
-      {
-        title: 'Phase 1 · Now–12mo — Hospital networks · Claims + RCM',
-        description:
-          '$260B lost to claim denials. AI can\'t be trained — the data can\'t leave. Federated agents learn across every site without touching a record.',
-        icon: 'tabler:building-hospital',
-      },
-      {
-        title: 'Phase 2 · 12–24mo — Pharmacovigilance',
-        description:
-          '90% of ADEs go undetected. Expanded from Phase 1 hospital relationships. FDA Dec 2025 RWE guidance validates the architecture.',
-        icon: 'tabler:heartbeat',
-      },
-      {
-        title: 'Phase 2 · 12–24mo — Health insurers + managed care',
-        description:
-          'Federated fraud detection and risk modeling across payers — legally, privately. Warm intros through hospital network relationships built in Phase 1.',
-        icon: 'tabler:shield-dollar',
-      },
-      {
-        title: 'Phase 3 · 24–36mo — Regional IDNs + pharma R&D',
-        description:
-          'Cross-site diagnostic AI for IDNs. Real-world evidence for pharma without data transfer agreements. MELLODDY: 4–10% accuracy gains.',
-        icon: 'tabler:microscope',
-      },
-      {
-        title: 'Phase 3 · 24–36mo — CDMOs + pharma manufacturing',
-        description:
-          '$50B+ annual batch failures. First federated manufacturing intelligence a CDMO can deploy in a quarter. 18 months → weeks.',
-        icon: 'tabler:flask',
-      },
-      {
-        title: 'Phase 4 · 36mo+ — Government — CMS, VA, DoD',
-        description:
-          '65M+ Medicare beneficiaries. 170+ VA sites — each learning alone. Our ARPA-H advisor is a direct procurement bridge.',
-        icon: 'tabler:building-bank',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Business Model ******************* -->
-
-  <Features2
-    id="business-model"
-    tagline="Business Model"
-    title="How Panama Health makes money"
-    columns={3}
-    items={[
-      {
-        title: 'Platform license — $150K–$500K / yr',
-        description:
-          'Annual SaaS per institution — hospitals, labs, device makers. Recurring, predictable revenue with long contract cycles.',
-        icon: 'tabler:license',
-      },
-      {
-        title: 'Federation tier — $5K–$20K / node',
-        description:
-          'Per-node fee for each connected edge device or data source. Revenue scales automatically as the network grows.',
-        icon: 'tabler:affiliate',
-      },
-      {
-        title: 'Professional services — one-time + retainer',
-        description:
-          'Implementation, integration, and compliance configuration. Deepens relationships and drives expansion within accounts.',
-        icon: 'tabler:tools',
-      },
-    ]}
-  />
-
-  <Stats
-    stats={[
-      { amount: '92%+', title: 'Gross margin target — software-defined, infrastructure-light' },
-      { amount: '3–5yr', title: 'Typical contract length — deep integration, durable enterprise relationships' },
-      { amount: '$188B', title: 'Healthcare AI by 2030 — rapidly expanding TAM with regulatory tailwinds' },
-      { amount: '$12B', title: 'Serviceable market — RCM + payer AI + federated pharma reachable in 5yr' },
-    ]}
-  />
-
-  <Note
-    icon="tabler:trending-up"
-    title="Network moat —"
-    description="every new institution makes the platform more valuable for everyone already in it. A compounding advantage baked into the architecture."
-  />
-
-  <!-- Competition ******************* -->
-
-  <Content
-    id="competition"
-    isReversed
-    tagline="Competition"
-    title="We occupy the quadrant no competitor has entered"
-    items={[
-      {
-        title: 'Full OS layer',
-        description: 'Not a point solution or single-use tool. The infrastructure layer the entire market runs on.',
-        icon: 'tabler:stack-2',
-      },
-      {
-        title: 'Edge-native from day 1',
-        description: 'Data never moves, by architectural design. Not retrofitted from a cloud-first stack.',
-        icon: 'tabler:cloud-off',
-      },
-      {
-        title: 'Agentic orchestration',
-        description: 'Compresses 18 months of integration to weeks. Autonomous agents handle the messy middle.',
-        icon: 'tabler:robot',
-      },
-      {
-        title: 'RCM + claims entry point',
-        description: 'Hospital networks competitors ignore entirely — an unobvious wedge into the largest healthcare buyers.',
-        icon: 'tabler:receipt',
-      },
-      {
-        title: 'Government pathway',
-        description: 'ARPA-H advisor as direct procurement bridge into CMS, VA, and DoD.',
-        icon: 'tabler:building-bank',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Full OS · Edge-native · Federated by design
-      </h3>
-      Owkin, Rhino, Lifebit, and Apheris each occupy a corner of the federated-learning space. None of them ship an
-      edge-native operating system for healthcare. We do.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Market Size ******************* -->
-
-  <Stats
-    id="market"
-    tagline="Market Size"
-    title="TAM · SAM · SOM"
-    subtitle="Bottom-up sizing across the four verticals Panama Health serves, sequenced by phase."
-    stats={[
-      { amount: '$188B+', title: 'TAM — Global healthcare AI market by 2030 (Grand View Research, 2025)' },
-      { amount: '$12B', title: 'SAM — U.S. hospitals, payers, pharma, and CDMOs deploying AI across siloed data' },
-      { amount: '$12M', title: 'SOM Year 3 — 15 hospital contracts + node fees + 2 payer pilots = ~$12M ARR' },
-    ]}
-  />
-
-  <Note
-    icon="tabler:chart-line"
-    title="Creating the category —"
-    description="federated learning infra is $35M today, growing 16% CAGR. We are building the OS that defines it."
-  />
-
-  <!-- Team ******************* -->
-
-  <Features2
-    id="team"
-    tagline="The Team"
-    title="Built to win at the intersection of tech + healthcare"
-    columns={3}
-    items={[
-      {
-        title: 'Hannah Kalantari — CEO & Co-Founder',
-        description:
-          'Healthcare AI operator (CMO & VP of Global GTM) spanning precision medicine, AI-driven diagnostics, and regenerative medicine. 10+ years across electrical engineering, software, IoT, and sales.',
-        icon: 'tabler:user-star',
-      },
-      {
-        title: 'Yaser Keneshloo, PhD — CTO & Co-Founder',
-        description:
-          '7+ yrs building & leading ML teams in startups. Expert in federated systems, distributed AI, and privacy-preserving inference. Leads federated learning runtime & node orchestration.',
-        icon: 'tabler:code',
-      },
-      {
-        title: 'Maryam Ziaei, PhD — Strategic Advisor',
-        description:
-          'Director, HealthTech Commercialization at ARPA-H — direct government procurement bridge. MedTech (FDA-Approved) startup founder. Stanford PhD.',
-        icon: 'tabler:school',
-      },
-    ]}
-  />
-
-  <Note
-    icon="tabler:user-plus"
-    title="Expanding the advisory board —"
-    description="bringing in domain leaders across regulatory, clinical, pharma, and enterprise health systems."
-  />
-
-  <!-- Why Now ******************* -->
-
-  <Steps2
-    id="why-now"
-    tagline="Why Now"
-    title="The window is open. Right now."
-    items={[
-      {
-        title: 'Edge hardware caught up',
-        description:
-          'NVIDIA, Apple, and Qualcomm chips can now train models on-device. The compute constraint is gone.',
-      },
-      {
-        title: 'Privacy laws forced the issue',
-        description:
-          'HIPAA, GDPR, and EU AI regulations made centralizing medical data legally untenable. Demand just arrived.',
-      },
-      {
-        title: 'Foundation models made local training efficient',
-        description:
-          'Fine-tuning now runs on a hospital server. What used to require a data center costs a fraction today.',
-      },
-      {
-        title: 'FDA is pointing here',
-        description:
-          'December 2025 RWE guidance formally removed the need for individual-level patient data — validating federated pharmacovigilance.',
-      },
     ]}
   />
 
