@@ -8,9 +8,7 @@ export const headerData = {
     },
     {
       text: 'Platform',
-      links: [
-        { text: 'Product', href: getPermalink('/#product') },
-      ],
+      links: [{ text: 'Product', href: getPermalink('/#product') }],
     },
     {
       text: 'Investors',

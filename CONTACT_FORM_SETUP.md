@@ -19,17 +19,20 @@ Web3Forms is completely free with unlimited form submissions and no signup requi
 Edit the file: `src/components/ui/Form.astro`
 
 **Find this line:**
+
 ```astro
-<form>
+<form></form>
 ```
 
 **Replace it with:**
+
 ```astro
 <form action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
   <input type="hidden" name="subject" value="New Pilot Program Inquiry from PanamaHealth" />
   <input type="hidden" name="from_name" value="PanamaHealth Contact Form" />
   <input type="hidden" name="redirect" value="https://panamahealth.github.io/thank-you" />
+</form>
 ```
 
 **Important:** Replace `YOUR_ACCESS_KEY_HERE` with the access key you received from Web3Forms.
@@ -49,17 +52,12 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroText
-    tagline="Thank You"
-    title="We've received your message!"
-  >
+  <HeroText tagline="Thank You" title="We've received your message!">
     <Fragment slot="subtitle">
-      <p class="text-xl text-muted mb-6">
-        Thank you for your interest in PanamaHealth's federated learning platform.
-      </p>
+      <p class="text-xl text-muted mb-6">Thank you for your interest in PanamaHealth's federated learning platform.</p>
       <p class="text-lg text-muted mb-6">
-        Our team will review your information and get back to you within 1-2 business days
-        to discuss your pilot program application.
+        Our team will review your information and get back to you within 1-2 business days to discuss your pilot program
+        application.
       </p>
       <p class="text-lg text-muted">
         In the meantime, feel free to explore our <a href="/" class="text-primary hover:underline">homepage</a>
@@ -108,13 +106,15 @@ If you prefer Formspree, follow these steps:
 Edit `src/components/ui/Form.astro`:
 
 **Find:**
+
 ```astro
-<form>
+<form></form>
 ```
 
 **Replace with:**
+
 ```astro
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"></form>
 ```
 
 Replace `YOUR_FORM_ID` with your actual Formspree form ID.
@@ -179,6 +179,7 @@ After setting up your form, verify these items:
 ### Form submissions not received
 
 **Check:**
+
 1. Access key is correctly inserted in the form
 2. Email address is correct (info@panamahealth.ai)
 3. Form has `method="POST"` attribute
@@ -187,6 +188,7 @@ After setting up your form, verify these items:
 ### Redirect not working
 
 **Check:**
+
 1. Thank you page exists at `/thank-you`
 2. Redirect URL in hidden field is correct
 3. Thank you page builds correctly (`npm run build`)
@@ -194,6 +196,7 @@ After setting up your form, verify these items:
 ### Spam issues
 
 **Solutions:**
+
 1. Add honeypot field (botcheck)
 2. Add reCAPTCHA (Web3Forms supports this)
 3. Add email verification

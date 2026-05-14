@@ -25,7 +25,7 @@
   }
 
   .border-gradient {
-    border-image: linear-gradient(135deg, #29D4D4 0%, #0168D0 100%) 1;
+    border-image: linear-gradient(135deg, #29d4d4 0%, #0168d0 100%) 1;
   }
 
   /* Smooth animations */

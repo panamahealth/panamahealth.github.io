@@ -79,6 +79,7 @@ git push -u origin main
 5. Click **Save**
 
 That's it! The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically:
+
 - Build the site when you push to `main`
 - Deploy to GitHub Pages
 - Make it available at your GitHub Pages URL
@@ -91,6 +92,7 @@ That's it! The GitHub Actions workflow (`.github/workflows/deploy.yml`) will aut
 4. Once complete, your site is live!
 
 **Your site URL:**
+
 - If using `USERNAME.github.io` repo: `https://USERNAME.github.io`
 - If using other repo name: `https://USERNAME.github.io/panamahealth-landing`
 
@@ -99,12 +101,14 @@ That's it! The GitHub Actions workflow (`.github/workflows/deploy.yml`) will aut
 ## Step 4: Update Configuration for Subdirectory (If Needed)
 
 **Skip this step if:**
+
 - Your repo is named `USERNAME.github.io` or `ORGNAME.github.io`
 - Your site deploys to the root URL
 
 **If your repo has a different name** (like `panamahealth-landing`):
 
 1. Update `astro.config.ts`:
+
    ```typescript
    export default defineConfig({
      output: 'static',
@@ -114,6 +118,7 @@ That's it! The GitHub Actions workflow (`.github/workflows/deploy.yml`) will aut
    ```
 
 2. Update `src/config.yaml`:
+
    ```yaml
    site:
      name: PanamaHealth
@@ -142,6 +147,7 @@ Want to use `www.panamahealth.ai` instead of `USERNAME.github.io`?
 ### Steps
 
 1. **Add CNAME file to your repo:**
+
    ```bash
    # Create CNAME file in public directory
    echo "www.panamahealth.ai" > public/CNAME
@@ -156,6 +162,7 @@ Want to use `www.panamahealth.ai` instead of `USERNAME.github.io`?
    Add these DNS records:
 
    **For apex domain (panamahealth.ai):**
+
    ```
    Type: A
    Name: @
@@ -175,6 +182,7 @@ Want to use `www.panamahealth.ai` instead of `USERNAME.github.io`?
    ```
 
    **For www subdomain (www.panamahealth.ai):**
+
    ```
    Type: CNAME
    Name: www
@@ -189,6 +197,7 @@ Want to use `www.panamahealth.ai` instead of `USERNAME.github.io`?
 4. **Update site configuration:**
 
    Update `src/config.yaml`:
+
    ```yaml
    site:
      name: PanamaHealth
@@ -197,6 +206,7 @@ Want to use `www.panamahealth.ai` instead of `USERNAME.github.io`?
    ```
 
    Update `astro.config.ts`:
+
    ```typescript
    export default defineConfig({
      output: 'static',
@@ -226,7 +236,7 @@ metadata:
   title:
     default: PanamaHealth - Federated Intelligence Infrastructure for Healthcare
     template: '%s — PanamaHealth'
-  description: "Connecting oceans of intelligence, not data. Federated learning infrastructure..."
+  description: 'Connecting oceans of intelligence, not data. Federated learning infrastructure...'
   robots:
     index: true
     follow: true
@@ -241,7 +251,7 @@ metadata:
    analytics:
      vendors:
        googleAnalytics:
-         id: 'G-XXXXXXXXXX'  # Replace with your ID
+         id: 'G-XXXXXXXXXX' # Replace with your ID
    ```
 4. Commit and push
 
@@ -263,6 +273,7 @@ metadata:
 ### Automatic Deployments
 
 Every time you push to the `main` branch, GitHub Actions will:
+
 1. Build the site
 2. Run optimizations (compression, image optimization)
 3. Deploy to GitHub Pages
@@ -271,6 +282,7 @@ Every time you push to the `main` branch, GitHub Actions will:
 ### Manual Deployment
 
 You can manually trigger a deployment:
+
 1. Go to **Actions** tab
 2. Select "Deploy to GitHub Pages"
 3. Click "Run workflow" > "Run workflow"
@@ -311,16 +323,19 @@ npm run build
 ### Build Fails on GitHub Actions
 
 **Check the Actions log:**
+
 1. Go to Actions tab
 2. Click on the failed workflow
 3. Expand the failed step to see error details
 
 **Common issues:**
+
 - **Module not found:** Run `npm install` locally and commit `package-lock.json`
 - **Image optimization fails:** Check image file sizes (<5MB each)
 - **Icon not found:** Verify icon names exist in Tabler Icons
 
 **Fix and redeploy:**
+
 ```bash
 # Fix the issue locally
 npm run build  # Verify it works
@@ -333,11 +348,13 @@ git push
 ### Site Shows 404
 
 **Causes:**
+
 - DNS not propagated yet (wait 1-24 hours)
 - Base URL misconfigured (check `astro.config.ts` and `config.yaml`)
 - GitHub Pages not enabled (check Settings > Pages)
 
 **Fix:**
+
 1. Verify GitHub Pages is enabled in Settings
 2. Check that `base:` in config matches your repo name
 3. Try accessing: `https://USERNAME.github.io/REPO-NAME` directly
@@ -347,12 +364,14 @@ git push
 **Cause:** Base URL mismatch
 
 **Fix:** Ensure `astro.config.ts` base matches your deployment:
+
 - Root domain: no `base:` needed
 - Subdirectory: `base: '/repo-name'`
 
 ### Custom Domain Not Working
 
 **Check:**
+
 1. CNAME file exists in `public/` directory
 2. DNS records are correct (use `dig www.panamahealth.ai` to verify)
 3. GitHub Pages custom domain is set in Settings
@@ -441,11 +460,13 @@ git push
 ### Sensitive Information
 
 **Never commit:**
+
 - API keys (Web3Forms access key goes in form, not repo)
 - Passwords
 - Environment variables with secrets
 
 **Safe to commit:**
+
 - Configuration files
 - Public content
 - Image assets
@@ -454,6 +475,7 @@ git push
 ### Form Security
 
 When setting up Web3Forms:
+
 - Access key is public (it's okay to be in source)
 - Add honeypot field to prevent spam
 - Consider adding reCAPTCHA for production

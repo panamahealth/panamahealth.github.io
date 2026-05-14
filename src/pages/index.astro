@@ -4,7 +4,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Note from '~/components/widgets/Note.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -27,7 +26,7 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Connecting oceans of <span class="text-primary">intelligence</span>, not data
+      Connecting oceans of <span class="text-primary">intelligence</span>,<br />not data
     </Fragment>
 
     <Fragment slot="bg">
@@ -47,7 +46,7 @@ const metadata = {
       {
         title: 'Layer 1 — The OS',
         description:
-          'Edge-native federated learning infrastructure. Sits beneath every hospital\'s existing stack — invisible, HIPAA-native, always on. The foundation no one else has built.',
+          "Edge-native federated learning infrastructure. Sits beneath every hospital's existing stack — invisible, HIPAA-native, always on. The foundation no one else has built.",
         icon: 'tabler:server-2',
       },
       {
@@ -68,11 +67,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
-
-  <Note
-    title="Not a slice of the market —"
-    description="Panama Health is building the infrastructure layer the entire market runs on."
-  />
 
   <!-- The Product ******************* -->
 
@@ -134,8 +128,8 @@ const metadata = {
       contracts — scaling the client base and the platform simultaneously.
       <br class="hidden md:inline" />
       <br class="hidden md:inline" />
-      <span class="font-semibold">Why us:</span> Healthcare AI operator + federated systems PhD + ARPA-H government
-      procurement advisor.
+      <span class="font-semibold">Why us:</span> Healthcare AI operator + federated systems PhD + ARPA-H government procurement
+      advisor.
       <br class="hidden md:inline" />
       <br class="hidden md:inline" />
       Reach us at

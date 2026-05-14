@@ -1,15 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Note from '~/components/widgets/Note.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Investor Outreach — PanamaHealth',
   description:
-    'Pre-seed investor outreach for PanamaHealth — the edge-native federated intelligence OS for healthcare. Raise details, use of funds, and how to reach the founders.',
+    'Pre-seed investor outreach for PanamaHealth — the edge-native federated intelligence OS for healthcare.',
 };
 ---
 
@@ -20,78 +17,6 @@ const metadata = {
     subtitle="Pre-seed round open. Talk directly to the founders."
   />
 
-  <Stats
-    stats={[
-      { amount: '$350K–$500K', title: 'Pre-seed round — open now' },
-      { amount: '$188B+', title: 'Healthcare AI TAM by 2030' },
-      { amount: '0', title: 'Edge-native federated OS competitors at scale' },
-    ]}
-  />
-
-  <Features2
-    title="Why Panama Health"
-    subtitle="The infrastructure layer the entire healthcare AI market will run on."
-    columns={2}
-    items={[
-      {
-        title: 'The wedge',
-        description:
-          'Hospital networks · claims + RCM — $260B lost annually to denials. AI cannot be trained because data cannot leave. Federated agents learn across every site without touching a record.',
-        icon: 'tabler:target-arrow',
-      },
-      {
-        title: 'The moat',
-        description:
-          'Every new institution makes the platform more valuable for everyone already in it. A compounding network advantage baked into the architecture.',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'The team',
-        description:
-          'Healthcare AI operator (CMO & VP Global GTM) + federated systems PhD + ARPA-H government procurement advisor. Built to win at the intersection of tech and healthcare.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'The timing',
-        description:
-          'Edge hardware caught up. Privacy laws forced the issue. FDA Dec 2025 RWE guidance validates the architecture. The window is open right now.',
-        icon: 'tabler:clock-hour-4',
-      },
-    ]}
-  />
-
-  <Features2
-    title="Use of funds"
-    subtitle="A pre-seed round designed to compound — every dollar accelerates both product and network."
-    columns={3}
-    items={[
-      {
-        title: 'Productionize agentic tools',
-        description:
-          'Bring the first agentic apps — claims + RCM, pharmacovigilance — to production-grade reliability and pilot deployment.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Expand the network',
-        description:
-          'Land additional hospital + payer contracts. Each new node compounds the value of the platform for everyone in it.',
-        icon: 'tabler:affiliate',
-      },
-      {
-        title: 'Federated runtime hardening',
-        description:
-          'Krum / Trimmed Mean aggregation, differential privacy, cryptographic provenance — production hardening of the edge-native OS layer.',
-        icon: 'tabler:shield-lock',
-      },
-    ]}
-  />
-
-  <Note
-    icon="tabler:mail"
-    title="Talk to the founders directly —"
-    description="info@panamahealth.ai · hannah@panamahealth.ai · yaser@panamahealth.ai"
-  />
-
   <CallToAction
     actions={[
       {
@@ -99,17 +24,11 @@ const metadata = {
         text: 'Request the Deck',
         href: '/contact',
       },
-      {
-        text: 'Email info@panamahealth.ai',
-        href: 'mailto:info@panamahealth.ai',
-      },
     ]}
   >
     <Fragment slot="title">Ready to back the OS of healthcare AI?</Fragment>
 
-    <Fragment slot="subtitle">
-      Pre-seed round — $350K–$500K. We respond to qualified investor inquiries within 1–2 business days.
-    </Fragment>
+    <Fragment slot="subtitle"> We respond to qualified investor inquiries within 1–2 business days. </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-gradient-cyan-blue opacity-10"></div>

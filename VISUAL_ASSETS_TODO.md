@@ -17,6 +17,7 @@ This document lists the visual assets that need to be sourced or created for the
 **Location:** Should replace the background in the Hero section on index.astro
 
 **Specifications:**
+
 - **Dimensions:** 1920x1080px (landscape)
 - **File size:** Optimize to <200KB using Squoosh.app
 - **Format:** WebP with JPG fallback
@@ -25,6 +26,7 @@ This document lists the visual assets that need to be sourced or created for the
 **Sourcing Options:**
 
 #### Option A: Unsplash (Recommended - Free)
+
 1. Visit https://unsplash.com
 2. Search for keywords:
    - "data network blue"
@@ -41,7 +43,9 @@ This document lists the visual assets that need to be sourced or created for the
    - Gradient: #29D4D4 to #0168D0
 
 #### Option B: AI-Generated (Free with Google Gemini/Nano Banana)
+
 Use prompt:
+
 ```
 "Abstract healthcare data network visualization, interconnected glowing nodes,
 flowing data lines, cyan and blue gradient color scheme (#29D4D4 to #0168D0),
@@ -50,17 +54,18 @@ futuristic medical technology"
 ```
 
 **Recommended Unsplash Images (direct searches):**
+
 - https://unsplash.com/s/photos/data-network
 - https://unsplash.com/s/photos/network-abstract-blue
 - https://unsplash.com/s/photos/connected-technology
 
 **Where to place the image:**
+
 1. Save image to: `src/assets/images/hero-bg.jpg` or `hero-bg.webp`
 2. Update `src/pages/index.astro` Hero component:
    ```astro
-   <Hero
-     image={{ src: '~/assets/images/hero-bg.jpg', alt: 'Healthcare network visualization' }}
-     ...
+   <Hero image={{ src: '~/assets/images/hero-bg.jpg', alt: 'Healthcare network visualization' }}
+   ...
    ```
 
 ### 2. Optional: "How It Works" Network Diagram
@@ -70,6 +75,7 @@ futuristic medical technology"
 **Location:** Could be added to the Steps section
 
 **Specifications:**
+
 - **Dimensions:** 800x600px
 - **File size:** <100KB
 - **Format:** SVG (preferred) or PNG
@@ -78,6 +84,7 @@ futuristic medical technology"
 **Creation Options:**
 
 #### Option A: Figma (Free)
+
 1. Create simple network diagram:
    - 3-5 nodes representing hospitals/labs
    - Central aggregation node
@@ -86,6 +93,7 @@ futuristic medical technology"
 3. Export as SVG
 
 #### Option B: draw.io (Free)
+
 1. Visit https://app.diagrams.net/
 2. Create flowchart with:
    - Circles for nodes (hospitals, labs, pharma)
@@ -94,6 +102,7 @@ futuristic medical technology"
 3. Export as SVG or PNG
 
 **Where to place the diagram:**
+
 1. Save to: `src/assets/images/federated-learning-diagram.svg`
 2. Can be added to Steps section or Content section in index.astro
 
@@ -104,12 +113,14 @@ futuristic medical technology"
 **Location:** Update in config.yaml
 
 **Specifications:**
+
 - **Dimensions:** 1200x628px (OpenGraph standard)
 - **File size:** <300KB
 - **Format:** PNG or JPG
 - **Content:** Logo + tagline + background
 
 **Creation:**
+
 1. Use Canva (free) or Figma
 2. Template:
    - Background: Gradient (cyan to blue) or hero image
